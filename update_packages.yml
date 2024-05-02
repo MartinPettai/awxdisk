@@ -1,0 +1,9 @@
+---
+- name: Update all packages
+  hosts: all
+  become: yes
+  tasks:
+    - name: Update package cache
+      package:
+        name: "*"
+        state: latest
